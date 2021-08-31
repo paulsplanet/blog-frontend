@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import styled from "styled-components";
 import Responsive from "../common/Responsive";
 import SubInfo from "../common/SubInfo";
@@ -39,6 +40,9 @@ const PostViewer = ({ post, error, loading, actionButtons }) => {
     const { title, body, user, publishedDate, tags } = post;
     return (
         <PostViewerBlock>
+            <Helmet>
+                <title>{title}-Board</title>
+            </Helmet>
             <PostHead>
                 <h1>{title}</h1>
                 <SubInfo username={user.username} publishedDate={publishedDate} hasMarginTop />
