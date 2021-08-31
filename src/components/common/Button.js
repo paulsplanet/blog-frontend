@@ -27,6 +27,11 @@ const buttonStyle = css`
             background-color: #ffa801;
         }
     `}
+    &:disabled {
+        background-color: #d1d8e0;
+        color: #778ca3;
+        cursor: not-allowed;
+    }
 `;
 
 const StyledButton = styled.button`
