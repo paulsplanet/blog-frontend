@@ -36,7 +36,14 @@ const PostItemBlock = styled.div`
     p {
         margin-top: 2rem;
     }
+`;
 
+const PostButton = styled(Button)`
+    font-size: 1.125rem;
+    width: 170px;
+    padding: 0.45rem 0;
+    display: flex;
+    justify-content: center;
 `;
 
 
@@ -63,7 +70,7 @@ const PostList = ({ posts, loading, error, showWriteButton }) => {
         <PostListBlock>
             <WritePostButtonWrapper>
                 {showWriteButton && (
-                    <Button cyan to='/write'>New Post</Button>
+                    <PostButton cyan to='/write'>New Post</PostButton>
                 )}
             </WritePostButtonWrapper>
             {!loading && posts && (

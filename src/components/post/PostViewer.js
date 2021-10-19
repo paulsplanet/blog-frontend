@@ -21,6 +21,7 @@ const PostHead = styled.div`
 `;
 
 const PostContent = styled.div`
+    margin-top: 3rem;
     font-size: 1.125rem;
     color: #778ca3;
 `;
@@ -47,9 +48,10 @@ const PostViewer = ({ post, error, loading, actionButtons }) => {
                 <h1>{title}</h1>
                 <SubInfo username={user.username} publishedDate={publishedDate} hasMarginTop />
                 <Tags tags={tags} />
+                <PostContent dangerouslySetInnerHTML={{ __html: body }} />
             </PostHead>
             {actionButtons}
-            <PostContent dangerouslySetInnerHTML={{ __html: body }} />
+            
         </PostViewerBlock>
     )
 };

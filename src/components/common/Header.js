@@ -36,6 +36,15 @@ const UserInfo = styled.div`
     margin-right: 1rem;
 `;
 
+const HeaderButton = styled(Button)`
+    background-color: white;
+    color: black;
+    border: 1px solid #666;
+    &:hover {
+        background-color: #f7f7f7;
+    }
+`;
+
 const Header = ({ user, onLogout }) => {
     return (
         <>
@@ -47,7 +56,7 @@ const Header = ({ user, onLogout }) => {
                     {user ? (
                         <div className="right">
                             <UserInfo>{user.username}</UserInfo>
-                            <Button onClick={onLogout}>Logout</Button>
+                            <HeaderButton onClick={onLogout}>Logout</HeaderButton>
                         </div>
                     ) : (
                         <div className="right">
